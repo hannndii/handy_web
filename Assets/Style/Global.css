@@ -1,8 +1,9 @@
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 }
 
 header {
-    background: #222;
+    background: #121212;
     padding: 15px 50px;
     display: flex;
     justify-content: space-between;
@@ -26,6 +27,7 @@ header {
     font-size: 24px;
     font-weight: bold;
     color: white;
+    margin-left: 4rem;
 }
 
 nav {
@@ -41,14 +43,14 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 25px;
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: semi-bold;
     position: relative;
     padding-bottom: 5px;
 }
@@ -71,7 +73,7 @@ nav ul li a.active::after {
 }
 
 .home {
-    display: flex;
+    display:flexbox;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -79,11 +81,13 @@ nav ul li a.active::after {
     padding: 20px;
 }
 .container {
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: space-between;
     width: 80%;
     max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .content {
@@ -94,12 +98,13 @@ nav ul li a.active::after {
 .content h1 {
     font-size: 3rem;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .content h2 {
     font-size: 1.5rem;
     font-weight: normal;
-    margin-bottom: 10px;
+    margin-top: 105px;
 }
 
 .home-subtitle {
@@ -108,14 +113,13 @@ nav ul li a.active::after {
     color: black; 
     font-weight: bold;
     font-size: 18px;
-    padding: 5px 10px; 
+    padding: 10px 15px; 
 }
 
 .image img {
-    width: 36.9rem; /* Sesuaikan ukuran */
+    width: 35.3rem; 
     height: auto;
-    margin-left: 17.5rem;
-     /* Opsional untuk rounded edges */
+    margin-left: 18rem;
 }
 .home span {
     color: yellow;
@@ -134,14 +138,13 @@ nav ul li a.active::after {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: white;
+    background-color: #d2c8c8;
 }
 
 .about .container {
     display: flex;
     align-items: center;
     max-width: 1000px;
-    background: #fff;
     padding: 50px;
     position: relative;
 }
@@ -152,9 +155,8 @@ nav ul li a.active::after {
 
 .image-frame {
     position: relative;
-    background: #222;
-    padding: 5px;
-    width: 300px;
+    padding: 0px;
+    width: 360px;
 }
 
 .image-frame img {
@@ -163,17 +165,16 @@ nav ul li a.active::after {
 }
 
 .about-text {
-    margin-left: 250px;
+    margin-left: 170px;
 }
 
 .about-text h3 {
     font-size: 16px;
-    text-transform: uppercase;
-    color: #444;
+    color: black;
 }
 
 .about-text h1 {
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
     text-transform: uppercase;
     margin: 5px 0;
@@ -186,13 +187,22 @@ nav ul li a.active::after {
 
 .about-text p {
     font-size: 16px;
-    color: #333;
+    color: #000000;
     line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 .projects {
     padding: 80px 50px;
     text-align: center;
+    background-color: white;
+}
+
+.projects h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    color: black;
 }
 
 .gallery {
@@ -218,7 +228,7 @@ nav ul li a.active::after {
 
 .overlay {
     position: absolute;
-    background: rgba(255, 255, 0, 0.8);
+    background: #c5b7b7;
     color: black;
     width: 100%;
     height: 100%;
@@ -234,11 +244,11 @@ nav ul li a.active::after {
 }
 
 .load-more {
-    background: #fff;
-    color: black;
-    padding: 10px 20px;
+    background: #242323;
+    color: rgb(255, 255, 255);
+    padding: 10px 30px;
     border: none;
-    margin-top: 20px;
+    margin-top: 100px;
     cursor: pointer;
 }
 
@@ -252,7 +262,7 @@ nav ul li a.active::after {
 
 .contact-container {
     max-width: 1100px;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -289,4 +299,140 @@ nav ul li a.active::after {
     font-size: 12px;     
     color: #aaa;        
     margin-top: 50px;    
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 1200px) {
+    html {
+        font-size: 15px; /* Slightly reduce base font size */
+    }
+    
+    .container {
+        width: 95%;
+    }
+    
+    .image img {
+        width: 100%;
+        max-width: 30rem;
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 14px; /* Further reduce base font size */
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+    
+    .content, .about-text {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .about-text {
+        margin-left: 0;
+    }
+    
+    .image img {
+        margin: 0 auto;
+    }
+    
+    .logo {
+        margin-left: 1rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 13px; /* Continue reducing base font size */
+    }
+    
+    header {
+        padding: 12px 15px;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    .content h1 {
+        font-size: 2.3rem;
+    }
+    
+    .content h2 {
+        font-size: 1.2rem;
+        margin-top: 40px;
+    }
+    
+    .about-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+    
+    .home-subtitle {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 12px; /* Smallest base font size */
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+        margin-left: 0;
+    }
+    
+    nav ul li {
+        margin: 0 5px;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+    
+    .about .container {
+        padding: 15px;
+    }
+    
+    .projects {
+        padding: 40px 15px;
+    }
+    
+    .projects h1 {
+        font-size: 1.7rem;
+        margin-bottom: 40px;
+    }
+    
+    .about-text p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+    html {
+        font-size: 11px;
+    }
+    
+    .contact-info h2 {
+        font-size: 1.4rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+    
+    .cta {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
 }
