@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #121212;
+    color: white;
+}
+
+header {
+    background: #222;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: yellow;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    transform: scaleX(1);
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    padding: 250px 100px;
+}
+
+.home h1 {
+    font-size: 3rem;
+}
+
+.home h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: -15px;
+}
+
+.home-subtitle {
+    display: inline-block; /* Agar ukuran kotak mengikuti teks */
+    background-color: yellow; /* Warna latar belakang */
+    color: black; /* Warna teks */
+    font-weight: bold;
+    font-size: 18px;
+    padding: 9px 10px; /* Padding untuk ukuran kotak */
+}
+
+
+.home span {
+    color: yellow;
+}
+
+.cta {
+    background: yellow;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.about {
+    padding: 80px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about .container {
+    display: flex;
+    align-items: center;
+}
+
+.about img {
+    width: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.projects {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery .item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .item img {
+    width: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.gallery .item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    background: rgba(255, 255, 0, 0.8);
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallery .item:hover .overlay {
+    opacity: 1;
+}
+
+.load-more {
+    background: #fff;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.contact {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+footer {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+}
